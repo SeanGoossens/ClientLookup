@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Created by sgoossens on 5/11/2017.
@@ -22,7 +23,9 @@ public class Payroll {
                 "Apple Lyn",
                 "Lee Nazal",
                 "Lindsy Kline",
-                "Vicky James"));
+                "Vicky James"
+
+        ));
 
 
         salary.addAll(Arrays.asList(60569,
@@ -40,9 +43,25 @@ public class Payroll {
         int i = 0;
 
         while (i < employees.size()) {
-            System.out.println("Employee Name: " + employees.get(i));
-            System.out.println(" Salary: " + salary.get(i));
+            System.out.println("Employee: " + employees.get(i));
+            System.out.println("Salary: " + salary.get(i));
+            System.out.println("");
             i = i + 1;
         }
+    }
+    void returnEmployeeSalary() {
+        int i = 0;
+        System.out.println("Type an employee to check their Salary: ");
+        Scanner check = new Scanner(System.in);
+        String lookup = check.nextLine();
+        while (i < employees.size()) {
+            if (lookup.equalsIgnoreCase(employees.get(i))) {
+                System.out.println(lookup + "'s salary is " + salary.get(i));
+                break;
+            } else {
+                i++;
+            }
+        }
+
     }
 }
