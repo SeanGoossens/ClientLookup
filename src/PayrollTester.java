@@ -9,8 +9,8 @@ import java.util.Scanner;
 public class PayrollTester {
 
     public static void main(String args[]) {
-        Payroll payroll = new Payroll();
-        payroll.returnEmployeeSalary();
+        Stocks stock = new Stocks();
+        stock.returnStockInfo();
 
     }
 
